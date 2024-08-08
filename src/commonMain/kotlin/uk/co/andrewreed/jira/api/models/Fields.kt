@@ -4,14 +4,14 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Fields(
-    val flagged: Boolean,
-    val sprint: Sprint?,
+    val flagged: Boolean = false,
+    val sprint: Sprint? = null,
     val closedSprints: List<ClosedSprint> = emptyList(),
     val description: String?,
     val project: Project,
-    val comment: Comments,
+    val comment: Comments = Comments(emptyList()),
     val epic: Epic? = null,
-    val worklog: Logs,
+    val worklog: Logs? = null,
     val updated: String,
-    val timetracking: TimeTracking
+    val timetracking: TimeTracking? = null
 )

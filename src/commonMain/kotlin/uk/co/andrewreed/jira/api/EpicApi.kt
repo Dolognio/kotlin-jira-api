@@ -21,7 +21,7 @@ class EpicApi(config: JiraConfig): Client(config) {
 
     suspend fun deleteEpic(epicIdOrKey: Int) = createAuthenticatedRequest(
         Unit.serializer(),
-        "/rest/api/2/issue/$epicIdOrKey",
+        "/rest/agile/1.0/issue/$epicIdOrKey",
         HttpMethod.Delete
     )
 }

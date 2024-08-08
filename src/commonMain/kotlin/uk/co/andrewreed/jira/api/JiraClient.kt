@@ -6,4 +6,5 @@ class JiraClient(config: JiraConfig) {
     val epic = EpicApi(config)
     val board = BoardApi(config)
     val project = ProjectApi(config)
+    val search = SearchApi(config)
 }
